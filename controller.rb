@@ -41,10 +41,6 @@ get '/address' do
     phone: '0131558030'
   }
 
-  word_formatter = WordFormatter.new(address[:postcode])
-
-  address[:postcode] = word_formatter.upcase
-
-  address.to_json()
+  address[:postcode].upcase.to_json()
 
 end
